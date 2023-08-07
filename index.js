@@ -19,3 +19,4 @@ resetBtn.addEventListener('click', () => {
     curValue = 0;
     counter.textContent = curValue;
 });
+
