@@ -8,5 +8,14 @@ const subBtn = document.querySelector('#subBtn');
 plusBtn.addEventListener('click', () => {
     curValue += 1;
     counter.textContent = curValue;
+});
 
+subBtn.addEventListener('click', () => {
+    curValue -= 1;
+    counter.textContent = curValue;
+});
+
+resetBtn.addEventListener('click', () => {
+    curValue = 0;
+    counter.textContent = curValue;
 });
