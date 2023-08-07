@@ -1,5 +1,12 @@
+const counter = document.querySelector('#counter');
+let curValue = 0;
 
-const counter = document.querySelector('#countLabel')
-const btn  = document.querySelectorAll('.btn')
+const plusBtn = document.querySelector('#plusBtn');
+const resetBtn = document.querySelector('#resetBtn');
+const subBtn = document.querySelector('#subBtn');
 
-console.log(btn)
+plusBtn.addEventListener('click', () => {
+    curValue += 1;
+    counter.textContent = curValue;
+
+});
