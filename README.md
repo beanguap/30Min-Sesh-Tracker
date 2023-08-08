@@ -8,8 +8,6 @@ Boost your productivity with this simple 30-minute session tracker that integrat
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
