@@ -1,16 +1,44 @@
-const startingMinutes = 30;
-let time = startingMinutes * 60;
+const start = document.getElementById('start');
+const reset = document.getElementById('reset');
 
-setInterval(updateCountdown, 1000);
+let m = document.getElementById('minute');
+let s = document.getElementById('seconds');
 
-const countdownEl = document.getElementById('countdown')
 
-function updateCountdown() {
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
+//store a reference to the variable
+let startTimer = 0;
 
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-
-    countdownEl.innerHTML = `${minutes}:${seconds}`;
-    time--;
+function timer(){
+   if(m.value == 0 && s.value == 0){
+    m.value = 0;
+    s.value = 0;
+   } else if (s.value != 0){
+        s.value--;
+   } else if(m.value != 0 && s.value == 0){
+    s.value = 59;
+    m.value--;
+   }
 }
+
+function stopTimer(){
+    clearInterval(startTimer);
+}
+
+
+
+start.addEventListener('click', function(){
+    //initialize the variable startTimer
+    function startInterval(){
+        startTimer = setInterval(function() {
+            timer();
+        }, 1000);
+    }
+    startInterval()
+})
+
+
+reset.addEventListener('click', function(){
+    m.value = 0;
+    s.value = 0;
+    stopTimer()
+})

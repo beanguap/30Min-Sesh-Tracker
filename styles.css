@@ -135,15 +135,19 @@ button {
 #minLabel {
     grid-area: 1/2/1/2;
     font-size: 20px;
+    padding-top: 70px;
 }
 
 #secLabel {
     grid-area: 1/4/1/4;
     font-size: 20px;
+    padding-top: 70px;
 }
 
 #minute {
     grid-area: 2/2/2/2;
+    color: #F8F8FF;
+    padding-left: 15px;
 }
 
 .semicolon {
@@ -153,9 +157,11 @@ button {
 
 #seconds {
     grid-area: 2/4/2/4;
+    color: #F8F8FF;
+    padding-left: 12px;
 }
 
-#startBtn {
+#start {
     padding: 9px 25px;
     background-color: #558564;
     border: none;
@@ -169,7 +175,7 @@ button {
     grid-area: 3/2/3/3;
 }
 
-#resetcountBtn {
+#reset {
     padding: 9px 25px;
     background-color: #cf8ba9;
     border: none;
