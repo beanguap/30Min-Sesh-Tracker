@@ -24,21 +24,25 @@ function stopTimer(){
     clearInterval(startTimer);
 }
 
+start.addEventListener('click', function () {
+    // Check if the timer is already running, and if so, stop it before starting a new one
+    if (startTimer) {
+        clearInterval(startTimer);
+    }
 
-
-start.addEventListener('click', function(){
-    //initialize the variable startTimer
-    function startInterval(){
-        startTimer = setInterval(function() {
+    // Initialize the variable startTimer
+    function startInterval() {
+        startTimer = setInterval(function () {
             timer();
         }, 1000);
     }
-    startInterval()
-})
+
+    startInterval();
+});
 
 
 reset.addEventListener('click', function(){
-    m.value = 0;
-    s.value = 0;
+    m.value = 30;
+    s.value = '00';
     stopTimer()
 })
