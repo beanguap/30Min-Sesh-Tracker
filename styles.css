@@ -29,11 +29,13 @@ input[type=number] {
 .content{ 
     padding-top: 40px;
     width: 50%;
+    min-width: 700px;
+    max-width: 800px;
     margin: 10px auto 40px;
     box-sizing: border-box;
-    float: left;
+    float: center;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #5d5d81;
 }
 
@@ -118,21 +120,10 @@ button {
     display: grid;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
     grid-template-columns: repeat(auto-fit, minmax(5, 1fr));
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px; /* Add a gap between grid items */
   }
-  
-  /* Media query for screens smaller than 768px (typical mobile screens) */
-  @media (max-width: 768px) {
-    .countdownTimer {
-      grid-template-columns: 1fr; /* Switch to a single column layout */
-      grid-template-rows: auto; /* Let rows adjust to content height */
-      grid-gap: 20px; /* Increase gap for better spacing on mobile */
-      padding: 20px; /* Add padding for better visual appearance */
-    }
-  }
-  
 
 .time {
     justify-self: center;
