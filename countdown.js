@@ -12,6 +12,11 @@ function timer(){
    if(m.value == 0 && s.value == 0){
     m.value = 0;
     s.value = 0;
+
+    let audio = new Audio('beep.mp3');
+    audio.volume = 0.5;
+        audio.play();
+
    } else if (s.value != 0){
         s.value--;
    } else if(m.value != 0 && s.value == 0){
